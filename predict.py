@@ -14,7 +14,7 @@ import shutil
 from cleanpdb import pdb_clean
 from get_centers import get_centers
 from types_and_gninatyper import create_gninatype_file,create_types_file
-from deeplearningmodels.cbam import ChannelAttention3D,SpatialAttention3D,BasicBlock3D,ResNet18_CBAM_3D
+from models.cbam import ChannelAttention3D,SpatialAttention3D,BasicBlock3D,ResNet18_CBAM_3D
 
 def parse_arguments(args=None):
 
@@ -32,7 +32,7 @@ def parse_arguments(args=None):
 
     return args, arg_str
 
-deep_model = torch.load('/content/gdrive/MyDrive/DeepLigType_V0/bestmodels/CBAM_2023-08-29_acc_0.915781_74.16.pth')
+deep_model = torch.load('trainedmodels/CBAM_2023-08-29_acc_0.915781_74.16.pth')
 
 if __name__ == '__main__':
     (args, cmdline) = parse_arguments()
