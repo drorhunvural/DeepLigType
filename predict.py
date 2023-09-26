@@ -18,7 +18,7 @@ from models.cbam import ChannelAttention3D,SpatialAttention3D,BasicBlock3D,ResNe
 
 def parse_arguments(args=None):
 
-    parser = argparse.ArgumentParser(description='Classify by Ligand Type')
+    parser = argparse.ArgumentParser(description='Classify based on Ligand Type')
 
     parser.add_argument('-p', '--protein', type=str, required=False, help="Input PDB file")
 
