@@ -13,13 +13,18 @@ import shutil
 from cleanpdb import pdb_clean
 from get_centers import get_centers
 from types_and_gninatyper import create_gninatype_file,create_types_file
-from models.cbam import ChannelAttention3D,SpatialAttention3D,BasicBlock3D,ResNet18_CBAM_3D
+
+from deeplearningmodels.cbam import ResNet18_CBAM_3D, BasicBlock3D, ChannelAttention3D, SpatialAttention3D
+
+current_directory = os.path.dirname(os.path.abspath(__file__))
+bestmodels_dir = os.path.join(current_directory, 'bestmodels')
 
 def parse_arguments(args=None):
 
-    parser = argparse.ArgumentParser(description='Classify based on Ligand Type')
+    parser = argparse.ArgumentParser(description='Classify by Ligand Type')
 
     parser.add_argument('-p', '--protein', type=str, required=False, help="Input PDB file")
+    parser.add_argument('-t', '--trainedpth', type=str, required=False, help="Trained Model")
 
     args = parser.parse_args(args)
 
@@ -31,15 +36,18 @@ def parse_arguments(args=None):
 
     return args, arg_str
 
-if not torch.cuda.is_available():
-    print("Warning: GPU not available!")
-    
-deep_model = torch.load('trainedmodels/CBAM_2023-08-29_acc_0.915781_74.16.pth')
+def to_cuda(*models):
+    return [model.to("cuda") for model in models]
 
 if __name__ == '__main__':
     (args, cmdline) = parse_arguments()
     
     main_path = os.getcwd() # it gives /content
+    trainedpth = args.trainedpth
+
+    trainedpth_dir = os.path.join(bestmodels_dir, trainedpth)
+
+    deep_model = torch.load(trainedpth_dir)
 
     protein_file= args.protein
     pro_id = protein_file.split("/")[-1].split(".")[0] # take four digit protein id 
@@ -47,7 +55,7 @@ if __name__ == '__main__':
 
     pdb_clean(protein_file,protein_nowat_file) #clean pdb file and remove hetero atoms/non standard residues
     
-    os.system('fpocket -f '+protein_nowat_file) # fpocket
+    os.system('fpocket -f '+ protein_nowat_file) # fpocket
 
     fpocket_dir=os.path.join(protein_nowat_file.replace('.pdb','_out'),'pockets')
 
@@ -149,8 +157,7 @@ if __name__ == '__main__':
         protein_id_parts = protein_id.split('_')
         if len(protein_id_parts) > 0:
             row[-2] = protein_id_parts[0]
-    print("predicted",categorization_prediction)
-
+  
     csvfilename = "{}.csv".format(pro_id)
 
     with open(csvfilename, 'w', newline='') as output_csv_file:
