@@ -1,5 +1,4 @@
 import torch
-print(torch.cuda.is_available())
 import os
 import molgrid
 import argparse
@@ -32,6 +31,9 @@ def parse_arguments(args=None):
 
     return args, arg_str
 
+if not torch.cuda.is_available():
+    print("Warning: GPU not available!")
+    
 deep_model = torch.load('trainedmodels/CBAM_2023-08-29_acc_0.915781_74.16.pth')
 
 if __name__ == '__main__':
