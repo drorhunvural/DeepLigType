@@ -2,7 +2,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch
 
-# Define the CBAM module
+# Define the CBAM module--
 class ChannelAttention3D(nn.Module):
     def __init__(self, in_planes, ratio=16):
         super(ChannelAttention3D, self).__init__()
