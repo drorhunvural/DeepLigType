@@ -127,7 +127,7 @@ if __name__ == '__main__':
             print("\n Classification Report:")
             print(classification_report(all_labels, all_predicted))
 
-    print('Best Accuracy: {:.2f}%'.format(max(test_accuracies) * 100))
-    print('Best F1 Score: {:.2f}'.format(max(f1_scores)))
-    print('Best Precision: {:.2f}'.format(max(precision_scores)))
-    print('Best Recall: {:.2f}'.format(max(recall_scores)))
+    print('Best Accuracy: {:.3f}%'.format(max(test_accuracies) * 100))
+    print('Best F1 Score: {:.3f}'.format(max(f1_scores)))
+    print('Best Precision: {:.3f}'.format(max(precision_scores)))
+    print('Best Recall: {:.3f}'.format(max(recall_scores)))
