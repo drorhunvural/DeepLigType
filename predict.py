@@ -42,7 +42,7 @@ def to_cuda(*models):
 if __name__ == '__main__':
     (args, cmdline) = parse_arguments()
     
-    main_path = os.getcwd() # it gives /content
+    project_path = os.path.dirname(os.path.abspath(__file__))
     trainedpth = args.trainedpth
 
     trainedpth_dir = os.path.join(bestmodels_dir, trainedpth)
@@ -80,8 +80,8 @@ if __name__ == '__main__':
     dims = gmaker2.grid_dimensions(24) 
     tensor_shape_2 = (1,)+dims #(1, 24, 48, 48, 48)
 
-    inputfile_name = 'inputfile_2.types'
-    inputfile_dir = os.path.join(main_path, inputfile_name)
+    inputfile_name = 'inputfile.types'
+    inputfile_dir = os.path.join(project_path, inputfile_name)
     #inputfile_dir = '/content/inputfile.types' # inputfile.types contains X,Y,Z,xxxx_nowat.gninatypes for exampleprovider
 
 
@@ -106,7 +106,7 @@ if __name__ == '__main__':
             outfile.write(line + "\n")
     
 
-    e_test_1 = molgrid.ExampleProvider(data_root= main_path, shuffle=False,stratify_receptor=True, balanced = False)
+    e_test_1 = molgrid.ExampleProvider(data_root= project_path, shuffle=False,stratify_receptor=True, balanced = False)
     e_test_1.populate(inputfile_dir)
 
     input_tensor_1 = torch.zeros(tensor_shape_2, dtype=torch.float32, device='cuda') #[1, 24, 48, 48, 48]
