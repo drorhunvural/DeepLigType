@@ -84,7 +84,6 @@ if __name__ == '__main__':
             loaded_model1.eval()
             for i in range(num_iterations):
                 batch =e_test.next_batch(batch_size )
-                # extract labels and centers of batch datapoints
                 batch.extract_labels(float_labels)
                 centers = float_labels[:,1:]
                 labels = float_labels[:,0].long().to('cuda')
