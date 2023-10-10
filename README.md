@@ -11,14 +11,16 @@ To run the program, you'll need an operating system with a Linux kernel. Please 
 
 The below libraries and their versions ensure the program functions without issues
 
+!pip3 install torch torchvision torchaudio
+!pip install molgrid
+!pip install biopython
+!mamba install fpocket
+!pip install scikit-learn
+
 ``` pip install -r requirements.txt```
 
-As a second option, Google Colab is a good choice if you want to use our program without needing a specific operating system or GPU on your local machine
+As a second option, Google Colab is a good choice if you want to use our program without needing a specific operating system or GPU on your local machine. If you use Google Colab, you can open '_Run_Colab.ipynb_' from your Google Drive and follow the instructions within.
 
-
-
-**Using Colab**
-Colab
 
 **Prediction**
 
