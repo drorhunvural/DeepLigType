@@ -29,13 +29,13 @@ As a second option, Google Colab is a good choice if you want to use our program
 Example: `python '.../DeepLigType/predict.py' -p '.../DeepLigType/5xpp.pdb' -t ".../DeepLigType/bestmodels/CNN_2023-08-30_acc_0.717969_59.26.pth"`
 
 
-**Evaluation**
+**_Evaluation_**
 
 ```!python '.../DeepLigType/evaluation.py' -t ".../trained_model_pth"```
 
 Example: `python '.../DeepLigType/evaluation.py' -t "CNN_2023-08-30_acc_0.717969_59.26.pth"`
 
-**Train**
+**_Train_**
 
 ```python '.../DeepLigType/train.py' -m "deeplearning_model_name" ```
 
