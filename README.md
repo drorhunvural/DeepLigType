@@ -33,7 +33,7 @@ Example: `python '.../DeepLigType/predict.py' -p '.../DeepLigType/5xpp.pdb' -t "
 
 ```!python '.../DeepLigType/evaluation.py' -t ".../trained_model_pth"```
 
-Example: `python '.../DeepLigType/evaluation.py' -t "CNN_2023-08-30_acc_0.717969_59.26.pth"`
+Example: <pre><code> python '.../DeepLigType/evaluation.py' -t "CNN_2023-08-30_acc_0.717969_59.26.pth" </code></pre>
 
 **_Training_**
 
