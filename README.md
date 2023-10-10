@@ -7,7 +7,7 @@ The paper "DeepLigType: Predicting Ligand Types of Protein-Ligand Binding Sites 
 
 **Requirements**
 
-`\n` To run the program, you'll need an operating system with a Linux kernel. Please note that certain libraries, such as libmolgrid, are not compatible with Windows. It should be executed on a GPU-equipped machine.
+<br/> To run the program, you'll need an operating system with a Linux kernel. Please note that certain libraries, such as libmolgrid, are not compatible with Windows. It should be executed on a GPU-equipped machine.
 
 The below libraries and their versions ensure the program functions without issues
 
