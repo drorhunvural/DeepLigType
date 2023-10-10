@@ -5,7 +5,7 @@ The paper "DeepLigType: Predicting Ligand Types of Protein-Ligand Binding Sites 
 
 [Link - Download Files](https://drive.google.com/drive/folders/1WVIpv6CbHBnRcE_0qR8E9AEwu7-CGgCZ?usp=sharing) 
 
-**_Requirements_**
+**_Requirements & Installation_**
 
 To run the program, you'll need an operating system with a Linux kernel. Please note that certain libraries, such as libmolgrid, are not compatible with Windows. It should be executed on a GPU-equipped machine.
 
@@ -22,16 +22,19 @@ The below libraries and their versions ensure the program functions without issu
 As a second option, Google Colab is a good choice if you want to use our program without needing a specific operating system or GPU on your local machine. If you use Google Colab, you can open '_Run_Colab.ipynb_' from your Google Drive and follow the instructions within.
 
 
-**Prediction**
+**_Prediction_**
 
-predict.py
+```python '.../DeepLigType/predict.py' -p '.../DeepLigType/xxxx.pdb' -t '.../trainedmodel'```
+Example: `python '.../DeepLigType/predict.py' -p '.../DeepLigType/5xpp.pdb' -t ".../DeepLigType/bestmodels/CNN_2023-08-30_acc_0.717969_59.26.pth"`
 
-pdb dosyasi projenin icinde olmali
 
 **Evaluation**
 
-evaluation.py
+```!python '.../DeepLigType/evaluation.py' -t ".../trained_model_pth"```
+Example: `python '.../DeepLigType/evaluation.py' -t "CNN_2023-08-30_acc_0.717969_59.26.pth"`
 
 **Train**
 
-train.py
+```python '.../DeepLigType/train.py' -m "deeplearning_model_name" ```
+
+Example: `python '.../DeepLigType/train.py' -m "cbam"`
