@@ -5,7 +5,7 @@ The paper "DeepLigType: Predicting Ligand Types of Protein-Ligand Binding Sites 
 
 [Link - Download Files](https://drive.google.com/drive/folders/1WVIpv6CbHBnRcE_0qR8E9AEwu7-CGgCZ?usp=sharing) 
 
-**Requirements**
+**_Requirements_**
 
 To run the program, you'll need an operating system with a Linux kernel. Please note that certain libraries, such as libmolgrid, are not compatible with Windows. It should be executed on a GPU-equipped machine.
 
