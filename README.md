@@ -35,7 +35,7 @@ Example: `python '.../DeepLigType/predict.py' -p '.../DeepLigType/5xpp.pdb' -t "
 
 Example: `python '.../DeepLigType/evaluation.py' -t "CNN_2023-08-30_acc_0.717969_59.26.pth"`
 
-**_Train_**
+**_Training_**
 
 ```python '.../DeepLigType/train.py' -m "deeplearning_model_name" ```
 
