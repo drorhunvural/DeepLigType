@@ -15,6 +15,11 @@ from get_centers import get_centers
 from types_and_gninatyper import create_gninatype_file,create_types_file
 
 from deeplearningmodels.cbam import ResNet18_CBAM_3D, BasicBlock3D, ChannelAttention3D, SpatialAttention3D
+from deeplearningmodels.seresnet import SEResNet, ResidualBlock, SEBlock
+from deeplearningmodels.cnn import CNNModel
+from deeplearningmodels.resnet18 import ResidualBlock_Resnet18, ResNet18
+from deeplearningmodels.resnet50 import ResidualBlock_Resnet50, ResNet50
+from deeplearningmodels.densenet import DenseNet3D, DenseBlock, TransitionBlock
 
 current_directory = os.path.dirname(os.path.abspath(__file__))
 bestmodels_dir = os.path.join(current_directory, 'bestmodels')
