@@ -11,6 +11,7 @@ To run the program, you'll need an operating system with a Linux kernel. Please 
 
 The below libraries and their versions ensure the program functions without issues
 
+Python 3.10.12<br/>
 torch==2.1.0<br/>
 torchvision==0.16.0<br/>
 torchaudio==2.1.0<br/>

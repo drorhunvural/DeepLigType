@@ -53,7 +53,7 @@ if __name__ == '__main__':
     trainedpth_dir = os.path.join(bestmodels_dir, trainedpth)
 
     deep_model = torch.load(trainedpth_dir)
-
+    deep_model.eval()
     protein_file= args.protein
     pro_id = protein_file.split("/")[-1].split(".")[0] # take four digit protein id 
     protein_nowat_file=protein_file.replace('.pdb','_nowat.pdb')
