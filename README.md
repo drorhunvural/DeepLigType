@@ -11,11 +11,13 @@ To run the program, you'll need an operating system with a Linux kernel. Please 
 
 The below libraries and their versions ensure the program functions without issues
 
-!pip3 install torch torchvision torchaudio<br/>
-!pip install molgrid<br/>
-!pip install biopython<br/>
-!mamba install fpocket<br/>
-!pip install scikit-learn<br/>
+torch==2.1.0<br/>
+torchvision==0.16.0<br/>
+torchaudio==2.1.0<br/>
+biopython==1.81<br/>
+molgrid==0.5.3<br/>
+scikit-learn==1.3.1<br/>
+fpocket==4.1<br/>
 
 ``` pip install -r requirements.txt```
 
