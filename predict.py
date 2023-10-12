@@ -153,7 +153,10 @@ if __name__ == '__main__':
     with open(inputfile_dir, 'r') as input_file:
      lines = input_file.readlines()
 
-    inputfiledata = [line.strip().split() for line in lines]
+    if batch_size == 50:
+      inputfiledata = [line.strip().split() for line in lines[:50]]
+    else:
+      inputfiledata = [line.strip().split() for line in lines]
 
     for i, row in enumerate(inputfiledata):
         prediction = categorization_prediction[i]
