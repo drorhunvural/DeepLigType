@@ -47,7 +47,7 @@ if __name__ == '__main__':
 
 
     trainedpth_dir = os.path.join(bestmodels_dir, trainedpth)
-    print(trainedpth_dir)
+   
     loaded_model1 =torch.load(trainedpth_dir)
     batch_size = 64
     
