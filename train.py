@@ -20,7 +20,6 @@ from deeplearningmodels.seresnet import SEResNet, ResidualBlock
 from deeplearningmodels.cbam import ResNet18_CBAM_3D, BasicBlock3D
 from deeplearningmodels.cnn import CNNModel
 from deeplearningmodels.resnet18 import ResidualBlock_Resnet18, ResNet18
-from deeplearningmodels.resnet50 import ResidualBlock_Resnet50, ResNet50
 from deeplearningmodels.densenet import DenseNet3D
 
 molgrid.set_random_seed(42)
@@ -80,12 +79,11 @@ float_labels = torch.zeros((batch_size,4), dtype=torch.float32, device='cuda')
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 input_tensor, float_labels = input_tensor.to(device), float_labels.to(device)
 
-model_seresnet, model_cbam, model_cnn, model_resnet18, model_resnet50, model_densenet = to_cuda(
+model_seresnet, model_cbam, model_cnn, model_resnet18, model_densenet = to_cuda(
     SEResNet(ResidualBlock, [2, 2, 2, 2]),
     ResNet18_CBAM_3D(BasicBlock3D, [2, 2, 2, 2]),
     CNNModel(num_classes=5),
     ResNet18(ResidualBlock_Resnet18, [2, 2, 2, 2]),
-    ResNet50(ResidualBlock_Resnet50, [3, 4, 6, 3]),
     DenseNet3D(growth_rate=32, block_config=(6, 12, 24, 16), num_classes=5)
 )
 
@@ -102,8 +100,6 @@ if __name__ == '__main__':
         model = model_cnn
     elif args.model == "resnet18":
         model = model_resnet18
-    elif args.model == "resnet50":
-        model = model_resnet50
     elif args.model == "densenet":
         model = model_densenet
     else:
@@ -233,7 +229,7 @@ if __name__ == '__main__':
     del model_cbam
     del model_cnn
     del model_resnet18
-    del model_resnet50
+  
 
     # Delete optimizer and other significant tensors or variables if they exist
     del optimizerAdam
