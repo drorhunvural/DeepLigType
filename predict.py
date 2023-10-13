@@ -18,7 +18,6 @@ from deeplearningmodels.cbam import ResNet18_CBAM_3D, BasicBlock3D, ChannelAtten
 from deeplearningmodels.seresnet import SEResNet, ResidualBlock, SEBlock
 from deeplearningmodels.cnn import CNNModel
 from deeplearningmodels.resnet18 import ResidualBlock_Resnet18, ResNet18
-from deeplearningmodels.resnet50 import ResidualBlock_Resnet50, ResNet50
 from deeplearningmodels.densenet import DenseNet3D, DenseBlock, TransitionBlock
 
 current_directory = os.path.dirname(os.path.abspath(__file__))
@@ -28,8 +27,8 @@ def parse_arguments(args=None):
 
     parser = argparse.ArgumentParser(description='Classify by Ligand Type')
 
-    parser.add_argument('-p', '--protein', type=str, required=False, help="Input PDB file")
-    parser.add_argument('-t', '--trainedpth', type=str, required=False, help="Trained Model")
+    parser.add_argument('-p', '--protein', type=str, required=True, help="Input PDB file")
+    parser.add_argument('-t', '--trainedpth', type=str, required=True, help="Trained Model (.pth)")
 
     args = parser.parse_args(args)
 
