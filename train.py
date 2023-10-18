@@ -10,7 +10,6 @@ from sklearn.metrics import accuracy_score, f1_score, confusion_matrix,classific
 from sklearn.metrics import recall_score,precision_score,precision_recall_fscore_support,roc_auc_score,roc_curve
 import numpy as np
 import os 
-import sys
 import argparse
 from datetime import datetime
 from tqdm import tqdm
