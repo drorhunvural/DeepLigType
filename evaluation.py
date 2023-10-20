@@ -11,7 +11,6 @@ from deeplearningmodels.seresnet import SEResNet, ResidualBlock
 from deeplearningmodels.cbam import ResNet18_CBAM_3D, BasicBlock3D, ChannelAttention3D, SpatialAttention3D
 from deeplearningmodels.cnn import CNNModel
 from deeplearningmodels.resnet18 import ResidualBlock_Resnet18, ResNet18
-from deeplearningmodels.resnet50 import ResidualBlock_Resnet50, ResNet50
 from deeplearningmodels.densenet import DenseNet3D
 
 molgrid.set_random_seed(42)
@@ -45,7 +44,6 @@ if __name__ == '__main__':
 
     trainedpth = args.trainedpth
 
-
     trainedpth_dir = os.path.join(bestmodels_dir, trainedpth)
    
     loaded_model1 =torch.load(trainedpth_dir)
@@ -69,7 +67,7 @@ if __name__ == '__main__':
     num_iterations = 20
     criterion = nn.CrossEntropyLoss()
 
-
+    # initializations
     input_tensor = torch.zeros(tensor_shape, dtype=torch.float32, device='cuda', requires_grad=True)
     float_labels = torch.zeros((batch_size,4), dtype=torch.float32, device='cuda')
 
