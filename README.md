@@ -46,4 +46,5 @@ Example: <pre><code> python '.../DeepLigType/evaluation.py' -t "CBAM_2023-08-29_
 Example: <pre><code> python '.../DeepLigType/train.py' -m "cbam" </code></pre>
 
 **Running DeepLigType: GitHub Guide**
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=SobCab1fZeA" frameborder="0" allowfullscreen></iframe>
+[![YouTube Video](https://img.youtube.com/vi/SobCab1fZeA/0.jpg)](https://www.youtube.com/watch?v=SobCab1fZeA)
+
