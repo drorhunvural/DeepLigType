@@ -47,5 +47,7 @@ Example: <pre><code> python '.../DeepLigType/train.py' -m "cbam" </code></pre>
 
 **Running DeepLigType: Video**<br/>
 
-[![YouTube Video](https://img.youtube.com/vi/SobCab1fZeA/0.jpg)](https://youtu.be/SobCab1fZeA?si=u-soXHHxLBHp8lUL)
+
 [![YouTube Video](https://img.shields.io/badge/Watch%20on%20YouTube-red?style=for-the-badge&logo=youtube)](https://youtu.be/SobCab1fZeA?si=u-soXHHxLBHp8lUL)
+<br/>
+[![YouTube Video](https://img.youtube.com/vi/SobCab1fZeA/0.jpg)](https://youtu.be/SobCab1fZeA?si=u-soXHHxLBHp8lUL)
