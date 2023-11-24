@@ -5,7 +5,7 @@ The paper "DeepLigType: Predicting Ligand Types of Protein-Ligand Binding Sites 
 
 **_Citation_**
 
-Stay tuned!
+Stay tuned! (Under Review)
 
 **_Files_**
 
