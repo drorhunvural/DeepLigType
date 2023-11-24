@@ -3,6 +3,10 @@
 The paper "DeepLigType: Predicting Ligand Types of Protein-Ligand Binding Sites Using a Deep Learning Model" is currently under review. More details will be provided shortly. Stay tuned!
 
 
+**_Citation_**
+Stay tuned!
+
+**_Files_**
 [Link - Download Files](https://drive.google.com/drive/folders/1WVIpv6CbHBnRcE_0qR8E9AEwu7-CGgCZ?usp=sharing) => The Molcache file and trained models (.pth) can be found via the link.
 
 **_Requirements & Installation_**
