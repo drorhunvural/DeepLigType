@@ -53,6 +53,10 @@ Example: <pre><code> python '.../DeepLigType/evaluation.py' -t "CBAM_2023-08-29_
 
 Example: <pre><code> python '.../DeepLigType/train.py' -m "cbam" </code></pre>
 
+**_Visualization_**
+
+Visualization is coming! Stay tuned!
+
 **Running DeepLigType: Video**<br/>
 
 
