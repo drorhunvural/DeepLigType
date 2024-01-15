@@ -9,7 +9,7 @@ import sys
 import time
 import collections
 import struct
-import numpy as np
+#import numpy as np
 
 import warnings
 warnings.filterwarnings("ignore")
