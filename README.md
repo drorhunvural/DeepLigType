@@ -17,7 +17,7 @@ Stay tuned! (Under Review)
 
 Please note that certain libraries, such as libmolgrid, are not compatible with Windows. To run the program, you'll need an operating system with a Linux kernel. Additionally, It should be executed on a GPU-equipped machine.
 
-The below libraries and their versions ensure the program functions without issues
+The below libraries and their versions ensure the program functions without issues. The latest library versions will also work without any problems. If you face any issues, report them by opening an issue.
 
 [Python](https://github.com/python) 3.10.12<br/>
 [torch](https://github.com/pytorch/pytorch)==2.1.0<br/>
