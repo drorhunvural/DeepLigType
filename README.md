@@ -19,17 +19,16 @@ Please note that certain libraries, such as libmolgrid, are not compatible with 
 
 The below libraries and their versions ensure the program functions without issues
 
-Python 3.10.12<br/>
-torch==2.1.0<br/>
-torchvision==0.16.0<br/>
-torchaudio==2.1.0<br/>
-biopython==1.81<br/>
-molgrid==0.5.3<br/>
-scikit-learn==1.3.1<br/>
-fpocket==4.1<br/>
-tqdm==4.66.1<br/>
+[Python](https://github.com/python) 3.10.12<br/>
+[torch](https://github.com/pytorch/pytorch)==2.1.0<br/>
+[torchvision](https://github.com/pytorch/pytorch)==0.16.0<br/>
+[torchaudio](https://github.com/pytorch/pytorch)==2.1.0<br/>
+[biopython](https://github.com/biopython/biopython)==1.81<br/>
+[molgrid](https://github.com/gnina/libmolgrid)==0.5.3<br/>
+[scikit-learn](https://github.com/scikit-learn/scikit-learn)==1.3.1<br/>
+[fpocket](https://github.com/Discngine/fpocket)==4.1<br/>
+[tqdm](https://github.com/tqdm/tqdm)==4.66.1<br/>
 
-Note: If you encounter difficulty during the [Fpocket](https://github.com/Discngine/fpocket) installation process, you can resolve it by installing Anaconda and then installing Fpocket using the conda install command.
 
 As a second option, Google Colab is a good choice if you want to use our program without needing a specific operating system or GPU on your local machine. If you use Google Colab, you can open '_Run_Colab.ipynb_' from your Google Drive and follow the instructions within.
 
