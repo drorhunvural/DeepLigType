@@ -29,8 +29,6 @@ scikit-learn==1.3.1<br/>
 fpocket==4.1<br/>
 tqdm==4.66.1<br/>
 
-``` pip install -r requirements.txt```
-
 As a second option, Google Colab is a good choice if you want to use our program without needing a specific operating system or GPU on your local machine. If you use Google Colab, you can open '_Run_Colab.ipynb_' from your Google Drive and follow the instructions within.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/drorhunvural/DeepLigType/blob/main/Run_Colab.ipynb)
