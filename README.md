@@ -15,7 +15,7 @@ Stay tuned! (Under Review)
 
 **_Requirements & Installation_**
 
-To run the program, you'll need an operating system with a Linux kernel. Please note that certain libraries, such as libmolgrid, are not compatible with Windows. It should be executed on a GPU-equipped machine.
+Please note that certain libraries, such as libmolgrid, are not compatible with Windows. To run the program, you'll need an operating system with a Linux kernel. Additionally, It should be executed on a GPU-equipped machine.
 
 The below libraries and their versions ensure the program functions without issues
 
@@ -27,6 +27,7 @@ biopython==1.81<br/>
 molgrid==0.5.3<br/>
 scikit-learn==1.3.1<br/>
 fpocket==4.1<br/>
+tqdm==4.66.1<br/>
 
 ``` pip install -r requirements.txt```
 
