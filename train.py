@@ -35,6 +35,8 @@ test_path = os.path.join(current_directory, 'dataset', 'testfinalv0.types')
 validate_path = os.path.join(current_directory, 'dataset', 'validatefinalv0.types')
 molcache_path = os.path.join(current_directory, 'dataset', 'pdb.molcache')
 
+num_features = 8 
+
 def parse_arguments(args=None):
 
     parser = argparse.ArgumentParser(description='Classify by Ligand Type')
@@ -130,9 +132,9 @@ if __name__ == '__main__':
     for epoch in range(num_epochs):
         for mode in ['train', 'validation']:
             if mode == 'train':
-                if best_train_model_filename is not None and epoch > 15:
-                    model = torch.load(best_train_model_filename)
-                    print('Loading the best training model...')
+                # if best_train_model_filename is not None and epoch > 15:
+                #     model = torch.load(best_train_model_filename)
+                #     print('Loading the best training model...')
                 model.train()
                 train_loss = 0
                 train_accuracy = 0
@@ -150,7 +152,7 @@ if __name__ == '__main__':
                           gmaker.forward(center,batch[b].coord_sets[0],input_tensor[b])
                         optimizerAdam.zero_grad()
 
-                        output = model(input_tensor[:,:24])
+                        output = model(input_tensor[:, :num_features])
                         loss = criterion(output,labels)
                         predicted = torch.argmax(output,dim=1)
                         accuracy = labels.eq(predicted).sum().float() / batch_size
@@ -192,7 +194,7 @@ if __name__ == '__main__':
                     for b in range(batch_size):
                       center = molgrid.float3(float(centers[b][0]),float(centers[b][1]),float(centers[b][2]))
                       gmaker.forward(center,batch[b].coord_sets[0],input_tensor[b])
-                    output = model(input_tensor[:,:24])
+                    output = model(input_tensor[:, :num_features])
                     loss = criterion(output,labels)
                     predicted = torch.argmax(output,dim=1)
                     accuracy = labels.eq(predicted).sum().float() / batch_size
