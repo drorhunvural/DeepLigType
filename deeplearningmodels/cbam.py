@@ -69,11 +69,11 @@ class BasicBlock3D(nn.Module):
 
 # Create ResNet-18 with CBAM
 class ResNet18_CBAM_3D(nn.Module):
-    def __init__(self, block, num_blocks, num_classes=1000):
+    def __init__(self, block, num_blocks, num_classes=1000,num_features=8):
         super(ResNet18_CBAM_3D, self).__init__()
         self.in_planes = 64
 
-        self.conv1 = nn.Conv3d(24, 64, kernel_size=3, stride=1, padding=1, bias=False)
+        self.conv1 = nn.Conv3d(num_features, 64, kernel_size=3, stride=1, padding=1, bias=False)
         self.bn1 = nn.BatchNorm3d(64)
         self.layer1 = self._make_layer(block, 16, num_blocks[0], stride=1)
         self.layer2 = self._make_layer(block, 32, num_blocks[1], stride=2)
