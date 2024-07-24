@@ -16,7 +16,7 @@ from deeplearningmodels.densenet import DenseNet3D
 molgrid.set_random_seed(42)
 torch.manual_seed(42)
 np.random.seed(42)
-
+num_features = 18
 def parse_arguments(args=None):
 
     parser = argparse.ArgumentParser(description='Classify by Ligand Type')
@@ -90,7 +90,7 @@ if __name__ == '__main__':
                     center = molgrid.float3(float(centers[b][0]),float(centers[b][1]),float(centers[b][2]))
                     gmaker.forward(center,batch[b].coord_sets[0],input_tensor[b])
 
-                output = loaded_model1(input_tensor[:,:24])
+                output = loaded_model1(input_tensor[:,:num_features])
                 loss = criterion(output,labels)
                 predicted = torch.argmax(output,dim=1)
 
