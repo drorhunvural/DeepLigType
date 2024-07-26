@@ -20,7 +20,8 @@ from deeplearningmodels.cbam import ResNet18_CBAM_3D, BasicBlock3D
 from deeplearningmodels.cnn import CNNModel
 from deeplearningmodels.resnet18 import ResidualBlock_Resnet18, ResNet18
 from deeplearningmodels.densenet import DenseNet3D
-
+from deeplearningmodels.cbam_channel import ResNet18_CA_3D, BasicBlock3D_Channel
+from deeplearningmodels.cbam_spatial import ResNet18_SA_3D, BasicBlock3D_spatial
 molgrid.set_random_seed(42)
 torch.manual_seed(42)
 np.random.seed(42)
@@ -35,7 +36,7 @@ test_path = os.path.join(current_directory, 'dataset', 'testfinalv0.types')
 validate_path = os.path.join(current_directory, 'dataset', 'validatefinalv0.types')
 molcache_path = os.path.join(current_directory, 'dataset', 'pdb.molcache')
 
-num_features = 8 
+num_features = 24
 
 def parse_arguments(args=None):
 
@@ -80,12 +81,14 @@ float_labels = torch.zeros((batch_size,4), dtype=torch.float32, device='cuda')
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 input_tensor, float_labels = input_tensor.to(device), float_labels.to(device)
 
-model_seresnet, model_cbam, model_cnn, model_resnet18, model_densenet = to_cuda(
+model_seresnet, model_cbam, model_cnn, model_resnet18, model_densenet, model_cbam_channel, model_cbam_spatial = to_cuda(
     SEResNet(ResidualBlock, [2, 2, 2, 2]),
     ResNet18_CBAM_3D(BasicBlock3D, [2, 2, 2, 2]),
     CNNModel(num_classes=5),
     ResNet18(ResidualBlock_Resnet18, [2, 2, 2, 2]),
-    DenseNet3D(growth_rate=32, block_config=(6, 12, 24, 16), num_classes=5)
+    DenseNet3D(growth_rate=32, block_config=(6, 12, 24, 16), num_classes=5),
+    ResNet18_CA_3D(BasicBlock3D_Channel, [2, 2, 2, 2]),
+    ResNet18_SA_3D(BasicBlock3D_spatial, [2, 2, 2, 2])
 )
 
 if __name__ == '__main__':
@@ -103,6 +106,10 @@ if __name__ == '__main__':
         model = model_resnet18
     elif args.model == "densenet":
         model = model_densenet
+    elif args.model == "cbam_channel":
+        model = model_cbam_channel
+    elif args.model == "cbam_spatial":
+        model = model_cbam_spatial
     else:
         raise ValueError(f"Unknown model type: {args.model}")
 
@@ -120,7 +127,7 @@ if __name__ == '__main__':
     accuracies = []
     validation_losses = []
     validation_accuracies = []
-    num_epochs = 25
+    num_epochs = 30
     num_iterations = 100
     validation_num_iterations = 100
 
@@ -230,7 +237,7 @@ if __name__ == '__main__':
     del model_cbam
     del model_cnn
     del model_resnet18
-  
+    del model_cbam_channel
 
     # Delete optimizer and other significant tensors or variables if they exist
     del optimizerAdam
