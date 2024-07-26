@@ -16,7 +16,7 @@ from deeplearningmodels.densenet import DenseNet3D
 molgrid.set_random_seed(42)
 torch.manual_seed(42)
 np.random.seed(42)
-num_features = 18
+num_features = 24
 def parse_arguments(args=None):
 
     parser = argparse.ArgumentParser(description='Classify by Ligand Type')
