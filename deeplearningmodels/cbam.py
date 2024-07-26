@@ -69,7 +69,7 @@ class BasicBlock3D(nn.Module):
 
 # Create ResNet-18 with CBAM
 class ResNet18_CBAM_3D(nn.Module):
-    def __init__(self, block, num_blocks, num_classes=1000,num_features=8):
+    def __init__(self, block, num_blocks, num_classes=1000,num_features=24):
         super(ResNet18_CBAM_3D, self).__init__()
         self.in_planes = 64
 
