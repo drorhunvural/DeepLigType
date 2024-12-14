@@ -7,7 +7,16 @@ The paper "DeepLigType: Predicting Ligand Types of Protein-Ligand Binding Sites 
 
 **_Citation_**
 
-Stay tuned! (Under Review)
+@ARTICLE{10747127,
+  author={Vural, Orhun and Jololian, Leon and Pan, Lurong},
+  journal={IEEE/ACM Transactions on Computational Biology and Bioinformatics}, 
+  title={DeepLigType: Predicting Ligand Types of ProteinLigand Binding Sites Using a Deep Learning Model}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-9},
+  keywords={Proteins;Deep learning;Computational modeling;Predictive models;Computer architecture;Inhibitors;Drugs;Convolutional neural networks;Accuracy;Training;Predict ligand type;Drug discovery;Deep learning},
+  doi={10.1109/TCBB.2024.3493820}}
 
 **_Files_**
 
@@ -63,3 +72,5 @@ Visualization is coming! Stay tuned!
 [![YouTube Video](https://img.shields.io/badge/Watch%20on%20YouTube-red?style=for-the-badge&logo=youtube)](https://youtu.be/SobCab1fZeA?si=u-soXHHxLBHp8lUL)
 <br/>
 [![YouTube Video](https://img.youtube.com/vi/SobCab1fZeA/0.jpg)](https://youtu.be/SobCab1fZeA?si=u-soXHHxLBHp8lUL)
+
+
