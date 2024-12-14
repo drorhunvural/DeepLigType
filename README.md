@@ -2,8 +2,7 @@
   <h1>DeepLigType: Predicting Ligand Types of Protein-Ligand Binding Sites Using a Deep Learning Model</h1>
 </div>
 
-The paper "DeepLigType: Predicting Ligand Types of Protein-Ligand Binding Sites Using a Deep Learning Model" is currently under review. More details will be provided shortly. Stay tuned!
-
+The paper "DeepLigType: Predicting Ligand Types of Protein-Ligand Binding Sites Using a Deep Learning Model" 
 
 **_Citation_**
 
