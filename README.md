@@ -6,7 +6,7 @@ The paper "DeepLigType: Predicting Ligand Types of Protein-Ligand Binding Sites 
 
 
 **_Citation_**
-
+```
 @ARTICLE{10747127,
   author={Vural, Orhun and Jololian, Leon and Pan, Lurong},
   journal={IEEE/ACM Transactions on Computational Biology and Bioinformatics}, 
@@ -17,7 +17,7 @@ The paper "DeepLigType: Predicting Ligand Types of Protein-Ligand Binding Sites 
   pages={1-9},
   keywords={Proteins;Deep learning;Computational modeling;Predictive models;Computer architecture;Inhibitors;Drugs;Convolutional neural networks;Accuracy;Training;Predict ligand type;Drug discovery;Deep learning},
   doi={10.1109/TCBB.2024.3493820}}
-
+```
 **_Files_**
 
 [Link - Download Files](https://drive.google.com/drive/folders/1WVIpv6CbHBnRcE_0qR8E9AEwu7-CGgCZ?usp=sharing) => The Molcache file and trained models (.pth) can be found via the link.
