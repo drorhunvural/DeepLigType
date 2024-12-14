@@ -6,6 +6,9 @@ The paper "DeepLigType: Predicting Ligand Types of Protein-Ligand Binding Sites 
 
 
 **_Citation_**
+
+https://ieeexplore.ieee.org/abstract/document/10747127
+
 ```
 @ARTICLE{10747127,
   author={Vural, Orhun and Jololian, Leon and Pan, Lurong},
