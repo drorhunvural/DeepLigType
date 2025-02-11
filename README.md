@@ -12,13 +12,13 @@ https://pubmed.ncbi.nlm.nih.gov/39509302/
 ```
 @ARTICLE{10747127,
   author={Vural, Orhun and Jololian, Leon and Pan, Lurong},
-  journal={IEEE/ACM Transactions on Computational Biology and Bioinformatics}, 
-  title={DeepLigType: Predicting Ligand Types of ProteinLigand Binding Sites Using a Deep Learning Model}, 
-  year={2024},
-  volume={},
-  number={},
-  pages={1-9},
-  keywords={Proteins;Deep learning;Computational modeling;Predictive models;Computer architecture;Inhibitors;Drugs;Convolutional neural networks;Accuracy;Training;Predict ligand type;Drug discovery;Deep learning},
+  journal={IEEE Transactions on Computational Biology and Bioinformatics}, 
+  title={DeepLigType: Predicting Ligand Types of Protein-Ligand Binding Sites Using a Deep Learning Model}, 
+  year={2025},
+  volume={22},
+  number={1},
+  pages={116-123},
+  keywords={Proteins;Deep learning;Computational modeling;Predictive models;Computer architecture;Inhibitors;Drugs;Convolutional neural networks;Accuracy;Training;Predict ligand type;Drug discovery;deep learning},
   doi={10.1109/TCBB.2024.3493820}}
 ```
 **_Files_**
